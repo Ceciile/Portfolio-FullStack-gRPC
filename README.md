@@ -19,3 +19,6 @@ Electron Webpack
 ## DevOps
 
 Docker
+
+### Script
+`npm run build` in frontend, then launch the server to see updates. 
