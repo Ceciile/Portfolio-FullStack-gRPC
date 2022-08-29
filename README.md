@@ -1,2 +1,21 @@
 # Portfolio-FullStack-gRPC
-cross-platform open source high performance Remote Procedure Call (RPC)
+Rethink with cross-platform open source high performance Remote Procedure Call (RPC)
+
+
+## BackEnd
+
+Django
+
+PostgreSQL
+
+## FrontEnd
+
+Typescript
+
+Redux Next.js
+
+Electron Webpack
+
+## DevOps
+
+Docker
