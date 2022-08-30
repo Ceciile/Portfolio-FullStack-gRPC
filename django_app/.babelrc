@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+/**
+* NOTE: if you're getting regeneratorRuntime is not defined with async/await in your React components replace the above babel configuration with version below.
+* https://www.valentinog.com/blog/await-react/#how-to-use-async-await-in-react-using-the-asyncawait-syntax
+*/

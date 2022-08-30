@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html')),
     path('', include('leads_modelDemo.urls')),
+    path('', include('django_app.urls')),
 ]
