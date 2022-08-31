@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <ul>
+            {% for intern in jobs %}
+                <li>{{ intern.company_name }} - {{ intern.get_status_display }}</li>
+            {% endfor %}
+            </ul>
+    </body>
+</html>

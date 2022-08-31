@@ -23,4 +23,5 @@ urlpatterns = [
     # path('', TemplateView.as_view(template_name='index.html')),
     path('', include('leads_modelDemo.urls')),
     path('', include('django_app.urls')),
+    path('', include('internship.urls')),
 ]
