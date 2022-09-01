@@ -10,8 +10,9 @@ class Intern(models.Model):
     job_title = models.CharField(max_length=128)
 
     # Intern.get_status_display function
-    status = models.IntegerField(choices=STATUS_ITEMS)
+    status = models.IntegerField(choices=STATUS_ITEMS,default=0)
     started_time = models.DateField()
+    postal = models.CharField(max_length=128,default=0)
 
     def __unicode__(self):
         return '<Internship: {}>'.format(self.company_name)
