@@ -7,12 +7,13 @@ from django.urls import reverse
 from .models import Intern
 from .forms import InternForm
 
-def index(request):
+def newinput(request):
     jobs = Intern.objects.all()
     
     if request.method == 'POST':
         form = InternForm(request.POST)
         if form.is_valid():
+            # get Form Data
             cleaned_data = form.cleaned_data
             intern = Intern()
             intern.job_title = cleaned_data['job_title']
@@ -20,14 +21,14 @@ def index(request):
             intern.postal = cleaned_data['postal']
             intern.started_time=cleaned_data['started_time']
             intern.save()
-            print('POST: ', intern)
-            return HttpResponseRedirect(reverse('index'))
+            context = {
+                'jobs': jobs,
+                'form': form,
+            }
+            return HttpResponseRedirect(reverse('newIntern'))
     else:
         form = InternForm()
         print('GET method.')
 
-    context = {
-        'jobs': jobs,
-        'form': form,
-    }
+    # avoid redirect
     return render(request, 'index.html', context=context)
