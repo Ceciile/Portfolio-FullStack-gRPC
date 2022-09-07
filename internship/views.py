@@ -21,14 +21,14 @@ def newinput(request):
             intern.postal = cleaned_data['postal']
             intern.started_time=cleaned_data['started_time']
             intern.save()
-            context = {
-                'jobs': jobs,
-                'form': form,
-            }
             return HttpResponseRedirect(reverse('newIntern'))
     else:
         form = InternForm()
         print('GET method.')
 
+    context = {
+                'jobs': jobs,
+                'form': form,
+            }
     # avoid redirect
     return render(request, 'index.html', context=context)
